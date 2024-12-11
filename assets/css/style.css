@@ -1,0 +1,67 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width:  100%;
+}
+
+#score {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+#introduction {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    text-align: center;
+    transition: opacity 2s;
+}
+
+#restart {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
+    border: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    display: none;
+    cursor: pointer;
+}
+
+
+#controls {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    border: none;
+    background: #333;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#controls button.active {
+    background: #007bff;
+    color: #fff;
+}
