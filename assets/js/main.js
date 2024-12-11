@@ -37,8 +37,7 @@ const heroWidth = 17;
 const heroHeight = 30;
 
 const canvas = document.getElementById("game");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+resizeCanvas();
 
 const ctx = canvas.getContext("2d");
 
@@ -116,9 +115,23 @@ window.addEventListener("mouseup", function (event) {
   }
 });
 
+window.addEventListener("touchstart", function (event) {
+  if (phase == "waiting") {
+    lastTimestamp = undefined;
+    introductionElement.style.opacity = 0;
+    phase = "stretching";
+    window.requestAnimationFrame(animate);
+  }
+});
+
+window.addEventListener("touchend", function (event) {
+  if (phase == "stretching") {
+    phase = "turning";
+  }
+});
+
 window.addEventListener("resize", function (event) {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  resizeCanvas();
   draw();
 });
 
@@ -343,4 +356,9 @@ function drawBackground() {
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
   trees.forEach((tree) => drawTree(tree.x, tree.color));
+}
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
