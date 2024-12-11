@@ -1,10 +1,10 @@
 # Stick Hero Game
 
-This is a simple Stick Hero game implemented in JavaScript. The game allows the player to control a hero using either the mouse or the microphone. The objective is to stretch the stick to the right length to reach the next platform without falling.
+This is a simple Stick Hero game implemented in JavaScript. The game allows the player to control a hero using the mouse. The objective is to stretch the stick to the right length to reach the next platform without falling.
 
 ## Features
 
-- **Control Modes**: Switch between mouse and microphone control modes.
+- **Control Mode**: Control the hero using the mouse.
 - **Dynamic Platforms**: Platforms are generated dynamically with varying gaps and widths.
 - **Score Tracking**: Keep track of your score as you progress through the game.
 - **Responsive Design**: The game canvas resizes based on the window size.
@@ -15,10 +15,6 @@ This is a simple Stick Hero game implemented in JavaScript. The game allows the 
 
    - Click and hold the mouse button to stretch the stick.
    - Release the mouse button to drop the stick and walk across it.
-
-2. **Microphone Mode**:
-   - Make a sound to start stretching the stick.
-   - Stop making a sound to drop the stick and walk across it.
 
 ## Setup and Installation
 
@@ -52,6 +48,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Inspired by the original Stick Hero game.
 - Uses the HTML5 Canvas API for rendering.
-- Sound detection implemented using the Web Audio API.
 
 Enjoy the game!

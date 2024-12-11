@@ -52,14 +52,14 @@ function resetGame() {
   phase = "waiting";
   lastTimestamp = undefined;
   sceneOffset = 0;
-  score = 0;
+  score = 0; // Reset score to 0
+  scoreElement.innerText = score;
 
   introductionElement.style.opacity = 1;
   restartButton.style.display = "none";
-  scoreElement.innerText = score;
+  scoreElement.innerText = `Score: ${score}`;
 
   platforms = [{ x: 50, w: 50 }];
-  generatePlatform();
   generatePlatform();
 
   sticks = [{ x: platforms[0].x + platforms[0].w, length: 0, rotation: 0 }];
