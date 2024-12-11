@@ -1,20 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100%;
+    min-height: 100vh;
     cursor: pointer;
+    flex-direction: column;
 }
 
-:root{
+:root {
     --primary-color: #ff0000;
     --secondary-color: #000000;
 }

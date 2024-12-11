@@ -1,18 +1,19 @@
-
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    max-width:  100%;
+    width: 100%;
+    max-width: 100%;
 }
 
 #score {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 2em;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
     font-weight: 900;
+    text-align: right;
 }
 
 #introduction {
@@ -24,6 +25,13 @@
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
     text-align: center;
     transition: opacity 2s;
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid var(--secondary-color);
+    /* Thêm viền nếu cần */
 }
 
 #restart {
@@ -39,4 +47,32 @@
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
     display: none;
     cursor: pointer;
+}
+/* Media Queries để điều chỉnh theo từng kích thước màn hình */
+@media (min-width: 768px) {
+    #score {
+        font-size: 2em;
+    }
+
+    #restart {
+        width: 120px;
+        height: 60px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #score {
+        font-size: 1.2em;
+    }
+
+    #restart {
+        width: 90px;
+        height: 40px;
+        font-size: 0.9em;
+    }
+
+    #introduction {
+        font-size: 0.9em;
+    }
 }
